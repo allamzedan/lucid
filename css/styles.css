@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #F7F9FC;
+    color: #1A2A4F;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #1A2A4F;
+    --slate: #2C3E5C;
+    --gold: #C9A03D;
+    --gold-light: #DFBB6B;
+    --white: #FFFFFF;
+    --off-white: #F0F3F8;
+    --card-bg: #FFFFFF;
+    --gray-light: #E9EDF2;
+    --text-muted: #4A5B7A;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.badge {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--navy);
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    color: var(--navy);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    background: #C9A03D30;
+    color: #1A2A4F;
+}
+
+.section-subhead {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 2rem 0 0.5rem;
+}
+
+.audience-heading {
+    margin-bottom: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--slate);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--gold);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background-color: var(--gold);
+    color: var(--navy);
+    box-shadow: 0 4px 8px rgba(201, 160, 61, 0.2);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: #b58a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201, 160, 61, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--navy);
+    cursor: pointer;
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible {
+    background: var(--gold-light);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.btn-copy {
+    background: var(--off-white);
+    color: var(--navy);
+    border: 1px solid var(--gray-light);
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.btn-copy:hover,
+.btn-copy:focus-visible {
+    background: var(--gold-light);
+    border-color: var(--gold);
+}
+
+.btn-primary {
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2.5rem 0 4rem;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.hero-visual {
+    flex: 0.9;
+    text-align: center;
+}
+
+.badge-premium {
+    display: inline-block;
+    background: rgba(201, 160, 61, 0.12);
+    color: var(--gold);
+    padding: 0.35rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(201, 160, 61, 0.3);
+}
+
+.badge-icon {
+    font-size: 0.75rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: #2C3E5C;
+    max-width: 550px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0 1.5rem;
+}
+
+.trust-badge-group {
+    display: flex;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.trust-badge-group i {
+    margin-right: 0.4rem;
+    color: var(--gold);
+}
+
+.micro-icon {
+    width: 100%;
+    max-width: 380px;
+    animation: subtleFloating 4s ease-in-out infinite;
+}
+
+.micro-icon svg {
+    transition: transform 0.2s;
+}
+
+.micro-icon svg.is-hovered {
+    transform: scale(1.02);
+}
+
+@keyframes subtleFloating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    margin: 3rem 0;
+}
+
+.value-card {
+    background: var(--card-bg);
+    padding: 2rem 1.5rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-light);
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
+    border-color: var(--gold-light);
+}
+
+.value-card::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    margin-top: 1rem;
+    transition: width 0.3s ease;
+}
+
+.value-card:hover::after {
+    width: 40px;
+}
+
+.card-icon {
+    font-size: 2.4rem;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+}
+
+.value-card h3 {
+    font-size: 1.45rem;
+}
+
+.value-card p {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.persona-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+.persona-card {
+    background: var(--card-bg);
+    flex: 1;
+    min-width: 200px;
+    padding: 1.8rem;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    border: 1px solid var(--gray-light);
+    transition: all 0.2s;
+}
+
+.persona-card:hover {
+    border-color: var(--gold);
+    background: #FFFCF5;
+}
+
+.persona-card i {
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.persona-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.persona-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.contact-channels {
+    background: var(--off-white);
+    padding: 2.5rem;
+    border-radius: 32px;
+    text-align: center;
+    margin: 2rem 0 3rem;
+}
+
+.contact-gem {
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.contact-title {
+    margin-top: 0.5rem;
+}
+
+.contact-description {
+    max-width: 550px;
+    margin: 0.5rem auto;
+}
+
+.email-big {
+    font-size: 1.4rem;
+    font-weight: 600;
+    background: var(--white);
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem 1.8rem;
+    border-radius: 60px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--gray-light);
+}
+
+.marketplace-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.marketplace-logos span i {
+    margin-right: 0.5rem;
+    color: var(--gold);
+}
+
+.hr-gold {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 1.2rem auto;
+    border-radius: 3px;
+}
+
+.secure-note {
+    font-size: 0.85rem;
+}
+
+.secure-note i {
+    color: var(--gold);
+}
+
+.closing-note {
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+footer {
+    border-top: 1px solid var(--gray-light);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.footer-logos i {
+    font-size: 1.6rem;
+    margin: 0 0.6rem;
+    color: var(--slate);
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.footer-main {
+    margin: 1rem 0 0.5rem;
+}
+
+.footer-sub {
+    font-size: 0.7rem;
+}
+
+.toast-msg {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    font-weight: 500;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.toast-msg.is-visible {
+    opacity: 1;
+}
+
+svg path,
+svg circle {
+    transition: all 0.2s;
+}
+
+@media (max-width: 800px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .trust-badge-group {
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .email-big {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+    nav {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .logo {
+        margin-bottom: 0.2rem;
+    }
+
+    .marketplace-logos {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
